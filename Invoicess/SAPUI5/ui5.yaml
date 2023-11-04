@@ -2,7 +2,7 @@
 
 specVersion: "3.1"
 metadata:
-  name: lualbal.sapui5
+  name: lualbal.SAPUI5
 type: application
 server:
   customMiddleware:
@@ -16,9 +16,9 @@ server:
             - /test-resources
           url: https://ui5.sap.com
         backend:
-         - path: /V2
-           url: "https;//services.odata.org"
-           destination: Northwind
+          - path: /v2
+            url: https://services.odata.org
+            destination: Northwind
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
@@ -28,5 +28,5 @@ server:
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: lualbal.sapui5
+        component: lualbal.SAPUI5
         ui5Theme: sap_horizon
